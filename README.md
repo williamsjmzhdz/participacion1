@@ -37,12 +37,12 @@ Crea una nueva película.
 
 ### PUT /api/peliculas/{id}
 
-Reemplaza completamente una película por su ID.
+Reemplaza completamente una película por su ID. En caso de no existir, es creada.
 
 - **Ruta**: `/api/peliculas/{id}`
 - **Respuestas posibles**:
-  - 200 OK: La película ha sido actualizada exitosamente.
-  - 404 Not Found: No se encuentra la película con el ID proporcionado.
+  - 200 OK: La película ha sido actualizada o creada exitosamente.
+  - 400 Bad Request: Hay un error en la solicitud.
 
 ### PATCH /api/peliculas/{id}
 
@@ -51,6 +51,7 @@ Actualiza parcialmente una película por su ID.
 - **Ruta**: `/api/peliculas/{id}`
 - **Respuestas posibles**:
   - 200 OK: La película ha sido actualizada exitosamente.
+  - 400 Bad Request: Hay un error en la solicitud.
   - 404 Not Found: No se encuentra la película con el ID proporcionado.
 
 ### DELETE /api/peliculas/{id}
@@ -59,5 +60,9 @@ Elimina una película por su ID.
 
 - **Ruta**: `/api/peliculas/{id}`
 - **Respuestas posibles**:
-  - 204 No Content: La película ha sido eliminada exitosamente.
+  - 200 OK: La película ha sido eliminada exitosamente.
   - 404 Not Found: No se encuentra la película con el ID proporcionado.
+ 
+### GET /api/peliculas/creditos
+
+Obtiene la lista de participantes de la práctica.
