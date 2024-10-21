@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "6b5b4592-4864-401b-8e97-2a43b4ef4610",
+		"name": "Participación 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37743953"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Blade Runner\",\r\n    \"director\": \"Ridley Scott\",\r\n    \"anio\": 1982\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savePelicula",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Blade Runner 2049\",\r\n    \"director\": \"Denis Villeneuve\",\r\n    \"anio\": 2017\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/4",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPeliculaById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/4",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/creditos",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						"creditos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePelicula",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Entrevista con el Vampiro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/1",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{uriBase}}/api/peliculas/10",
+					"host": [
+						"{{uriBase}}"
+					],
+					"path": [
+						"api",
+						"peliculas",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
